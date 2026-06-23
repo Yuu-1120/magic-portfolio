@@ -285,3 +285,30 @@ export interface Uses extends BasePageConfig {
   /** Categorized list of tools/products */
   categories: UsesCategory[];
 }
+
+/**
+ * A single entry in the Now page (what I'm doing right now).
+ */
+export interface NowEntry {
+  /** Category label (e.g., "Building", "Reading", "Learning") */
+  category: string;
+  /** Icon name from icons.ts */
+  icon?: string;
+  /** Short description of what's happening */
+  description: React.ReactNode;
+  /** Optional link (e.g., to a project, book, or course) */
+  link?: string;
+  /** Optional status indicator */
+  status?: 'active' | 'paused' | 'completed';
+}
+
+/**
+ * Now page configuration.
+ * @description Configuration for the /now page — what I'm currently working on and interested in.
+ */
+export interface Now extends BasePageConfig {
+  /** Last updated timestamp (displayed on the page) */
+  updatedAt: string;
+  /** List of current activities/interests */
+  entries: NowEntry[];
+}

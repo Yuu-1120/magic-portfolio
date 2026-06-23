@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work, Uses } from '@/types';
+import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work, Uses, Now } from '@/types';
 import { Line, Row, Text } from '@once-ui-system/core';
 
 const person: Person = {
@@ -413,4 +413,55 @@ const uses: Uses = {
   ]
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery, uses };
+const now: Now = {
+  path: '/now',
+  label: 'Now',
+  title: `Now – ${person.name}`,
+  description: `What ${person.name} is currently working on and interested in`,
+  updatedAt: 'June 2026',
+  entries: [
+    {
+      category: 'Building',
+      icon: 'code',
+      description: (
+        <>Working on a portfolio site with Next.js and Once UI — adding new pages and refining the design system.</>
+      ),
+      status: 'active'
+    },
+    {
+      category: 'Learning',
+      icon: 'book',
+      description: (
+        <>Deep diving into WebGL and shader programming — exploring Three.js and GLSL for creative coding.</>
+      ),
+      link: 'https://threejs.org',
+      status: 'active'
+    },
+    {
+      category: 'Reading',
+      icon: 'book',
+      description: (
+        <>
+          "Designing Data-Intensive Applications" by Martin Kleppmann — a thorough exploration of distributed systems.
+        </>
+      ),
+      status: 'active'
+    },
+    {
+      category: 'Exploring',
+      icon: 'browser',
+      description: (
+        <>Experimenting with AI-assisted development workflows — Cursor, GitHub Copilot, and custom MCP servers.</>
+      ),
+      status: 'active'
+    },
+    {
+      category: 'Designing',
+      icon: 'paintbrush',
+      description: <>Building a personal design system with Once UI — focusing on typography scale and color tokens.</>,
+      status: 'active'
+    }
+  ]
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery, uses, now };

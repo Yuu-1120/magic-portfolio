@@ -30,7 +30,9 @@ import {
   PiPaintBrushDuotone,
   PiCodeDuotone,
   PiBrowserDuotone,
-  PiPlugDuotone
+  PiPlugDuotone,
+  PiClockDuotone,
+  PiSparkleDuotone
 } from 'react-icons/pi';
 
 import { SiJavascript, SiNextdotjs, SiFigma, SiSupabase } from 'react-icons/si';
@@ -93,7 +95,9 @@ export const iconLibrary: Record<string, IconType> = {
   paintbrush: PiPaintBrushDuotone,
   code: PiCodeDuotone,
   browser: PiBrowserDuotone,
-  plugin: PiPlugDuotone
+  plugin: PiPlugDuotone,
+  clock: PiClockDuotone,
+  sparkle: PiSparkleDuotone
 };
 
 export type IconLibrary = typeof iconLibrary;
