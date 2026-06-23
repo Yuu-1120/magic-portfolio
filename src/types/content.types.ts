@@ -1,5 +1,5 @@
-import { IconName } from "@/resources/icons";
-import { zones } from "tzdata";
+import { IconName } from '@/resources/icons';
+import { zones } from 'tzdata';
 
 /**
  * IANA time zone string (e.g., 'Asia/Calcutta', 'Europe/Vienna').
@@ -243,4 +243,45 @@ export interface Gallery extends BasePageConfig {
     /** Image orientation (horizontal/vertical) */
     orientation: string;
   }>;
+}
+
+/**
+ * A single item in the Uses page.
+ */
+export interface UsesItem {
+  /** Name of the tool/product */
+  name: string;
+  /** URL-safe slug for the detail page (must match MDX filename in /uses/items/) */
+  slug: string;
+  /** Short description */
+  description: React.ReactNode;
+  /** Icon name from icons.ts */
+  icon?: string;
+  /** Optional link to the product/tool */
+  link?: string;
+  /** Optional tags (e.g., "Free", "Open Source", "Daily Driver") */
+  tags?: string[];
+  /** Optional cover image for the detail page */
+  image?: string;
+}
+
+/**
+ * A category group in the Uses page.
+ */
+export interface UsesCategory {
+  /** Category title (e.g., "Hardware", "Software") */
+  title: string;
+  /** Whether to display this category */
+  display: boolean;
+  /** Items in this category */
+  items: UsesItem[];
+}
+
+/**
+ * Uses page configuration.
+ * @description Configuration for the /uses page — tools, gear, and software I use daily.
+ */
+export interface Uses extends BasePageConfig {
+  /** Categorized list of tools/products */
+  categories: UsesCategory[];
 }

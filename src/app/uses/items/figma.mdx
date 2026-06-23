@@ -1,0 +1,65 @@
+---
+title: 'Figma'
+subtitle: 'Design system powerhouse'
+summary: 'How I use Figma for everything from rapid prototyping to maintaining a scalable design system across products.'
+publishedAt: '2024-02-10'
+images: []
+tag: 'Software'
+link: 'https://figma.com'
+---
+
+## Overview
+
+Figma has been my primary design tool for over 5 years. What started as a simple UI design tool has evolved into a complete design system platform that bridges the gap between design and development.
+
+## How I Use Figma
+
+### Design Systems
+
+I build and maintain component libraries in Figma that directly mirror the code implementation. Every component, variant, and token is structured to map 1:1 with the React component library.
+
+Key practices:
+
+- **Auto Layout everywhere** — mirrors flexbox behavior, making handoff seamless
+- **Component properties** — boolean, instance swap, and text properties for every variant
+- **Design tokens via Variables** — colors, spacing, radius, and typography all defined as variables
+
+### Prototyping
+
+For interactive prototypes, I use Figma's advanced prototyping features:
+
+- Smart animate for micro-interactions
+- Component variants with interaction states
+- Scroll behaviors and sticky headers
+- Variable-driven conditional logic
+
+### Developer Handoff
+
+Since I'm both the designer and developer, the handoff is direct. I use Figma's Dev Mode to inspect spacing, extract CSS values, and verify component structure before implementing.
+
+## Essential Plugins
+
+1. **Autoflow** — generates connection diagrams between screens
+2. **Content Reel** — realistic placeholder data (names, avatars, text)
+3. **Contrast** — WCAG accessibility checker
+4. **Tokens Studio** — export design tokens as JSON for code
+
+## File Organization
+
+```
+📂 Project Name
+├── 📄 Design Tokens
+├── 📄 Components (library)
+├── 📄 Icons (library)
+├── 📄 Screens
+│   ├── 📱 Mobile
+│   ├── 💻 Desktop
+│   └── 📊 Responsive
+└── 📄 Archive
+```
+
+## Tips
+
+- Use **section frames** to organize screens — they're collapsible and easy to navigate
+- Name layers semantically (`button/primary`, `card/project`) — it helps when inspecting in Dev Mode
+- Keep the main component library in a separate file and publish it — changes propagate automatically

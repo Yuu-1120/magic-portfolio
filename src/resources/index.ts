@@ -1,14 +1,5 @@
 // import a pre-defined template for config and content options
-export {
-  person,
-  social,
-  newsletter,
-  home,
-  about,
-  blog,
-  work,
-  gallery,
-} from "./content";
+export { person, social, newsletter, home, about, blog, work, gallery, uses } from './content';
 
 export {
   display,
@@ -22,5 +13,5 @@ export {
   sameAs,
   socialSharing,
   effects,
-  dataStyle,
-} from "./once-ui.config";
+  dataStyle
+} from './once-ui.config';

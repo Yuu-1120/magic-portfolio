@@ -1,4 +1,4 @@
-import { IconType } from "react-icons";
+import { IconType } from 'react-icons';
 
 import {
   HiArrowUpRight,
@@ -11,8 +11,8 @@ import {
   HiOutlineEyeSlash,
   HiOutlineDocument,
   HiOutlineGlobeAsiaAustralia,
-  HiOutlineRocketLaunch,
-} from "react-icons/hi2";
+  HiOutlineRocketLaunch
+} from 'react-icons/hi2';
 
 import {
   PiHouseDuotone,
@@ -20,16 +20,35 @@ import {
   PiGridFourDuotone,
   PiBookBookmarkDuotone,
   PiImageDuotone,
-} from "react-icons/pi";
+  PiWrenchDuotone,
+  PiMonitorDuotone,
+  PiKeyboardDuotone,
+  PiMouseDuotone,
+  PiHeadphonesDuotone,
+  PiDesktopTowerDuotone,
+  PiTerminalWindowDuotone,
+  PiPaintBrushDuotone,
+  PiCodeDuotone,
+  PiBrowserDuotone,
+  PiPlugDuotone
+} from 'react-icons/pi';
+
+import { SiJavascript, SiNextdotjs, SiFigma, SiSupabase } from 'react-icons/si';
 
 import {
-  SiJavascript,
-  SiNextdotjs,
-  SiFigma,
-  SiSupabase,
-} from "react-icons/si";
-
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+  FaDiscord,
+  FaGithub,
+  FaLinkedin,
+  FaX,
+  FaThreads,
+  FaInstagram,
+  FaXTwitter,
+  FaFacebook,
+  FaPinterest,
+  FaWhatsapp,
+  FaReddit,
+  FaTelegram
+} from 'react-icons/fa6';
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -64,6 +83,17 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  uses: PiWrenchDuotone,
+  monitor: PiMonitorDuotone,
+  keyboard: PiKeyboardDuotone,
+  mouse: PiMouseDuotone,
+  headphones: PiHeadphonesDuotone,
+  desktop: PiDesktopTowerDuotone,
+  terminal: PiTerminalWindowDuotone,
+  paintbrush: PiPaintBrushDuotone,
+  code: PiCodeDuotone,
+  browser: PiBrowserDuotone,
+  plugin: PiPlugDuotone
 };
 
 export type IconLibrary = typeof iconLibrary;

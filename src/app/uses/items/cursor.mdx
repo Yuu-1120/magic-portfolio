@@ -1,0 +1,53 @@
+---
+title: 'Cursor'
+subtitle: 'AI-native code editor'
+summary: 'How Cursor has transformed my development workflow with AI-powered code completion, editing, and conversation.'
+publishedAt: '2024-03-01'
+images: []
+tag: 'Software'
+link: 'https://cursor.com'
+---
+
+## Overview
+
+Cursor is an AI-first code editor built on top of VS Code. It's become my primary development environment because it seamlessly integrates AI assistance into every part of the coding workflow — without getting in the way.
+
+## Why Cursor Over VS Code
+
+### Inline Editing (Cmd+K)
+
+Instead of copy-pasting code into ChatGPT, I can select any block of code and hit `Cmd+K` to describe the change I want. Cursor edits it in place, respecting the surrounding context. This is especially powerful for:
+
+- Refactoring components while preserving prop types
+- Generating boilerplate (API routes, test files, type definitions)
+- Translating between patterns (e.g., class components to hooks)
+
+### Tab Completion
+
+Cursor's autocomplete goes beyond GitHub Copilot. It predicts not just the next line, but the next logical step — often suggesting entire function bodies that match my intent.
+
+### Codebase Context
+
+Cursor indexes the entire project, so when I ask "where is authentication handled?" or "refactor this to use the shared hook", it actually knows the codebase structure.
+
+## My Key Bindings and Settings
+
+```json
+{
+  "cursor.composer.multiline": true,
+  "cursor.general.showInlineDiff": true,
+  "editor.fontSize": 14,
+  "editor.fontFamily": "Geist Mono"
+}
+```
+
+## Extensions I Use
+
+- **GitLens** — blame annotations and history
+- **Error Lens** — inline error display
+- **Tailwind CSS IntelliSense** — utility class autocomplete
+- **Pretty TypeScript Errors** — readable type errors
+
+## When I Don't Use Cursor
+
+For quick file edits, SSH sessions, or when working in the terminal, I'll use Vim or Nano directly. Cursor shines when I'm actively building features, reviewing PRs, or refactoring large sections.
