@@ -1,0 +1,442 @@
+---
+title: 'Adobe Photoshop'
+subtitle: 'The industry standard for image editing'
+summary: 'A deep dive into how Adobe Photoshop fits into my daily design and development workflow — from compositing and retouching to preparing production-ready assets.'
+publishedAt: '2024-04-12'
+images: []
+tag: 'Software'
+---
+
+## Overview
+
+Adobe Photoshop has been part of my creative toolkit for over a decade. Despite the emergence of newer tools like Affinity Photo and Figma's expanding capabilities, Photoshop remains irreplaceable for complex image editing, compositing, and pixel-level precision work. It's the tool I reach for whenever a project demands more than what vector-based design tools can offer.
+
+## Version & License
+
+- **Version:** Adobe Photoshop 2024 (v25.x)
+- **License:** Adobe Creative Cloud subscription
+- **Plan:** Photography Plan (20GB) — includes Photoshop + Lightroom
+- **Platform:** macOS (native Apple Silicon support since v22.4)
+
+## Why Photoshop Still Matters
+
+### Pixel-Level Control
+
+While Figma excels at interface design and vector work, Photoshop gives you absolute control over every pixel. This is essential for:
+
+- Photo retouching and color grading
+- Complex masking and compositing
+- Texture creation and manipulation
+- Preparing hero images for web projects
+- Batch processing large sets of images
+- Creating patterns and seamless textures
+
+### Generative AI Integration
+
+Adobe's Firefly-powered Generative Fill has transformed how I work:
+
+1. **Extending backgrounds:** Need a wider hero image? Generative Fill can extend it seamlessly
+2. **Object removal:** Unwanted elements disappear in seconds with natural-looking results
+3. **Concept exploration:** Generate variations of a scene without starting from scratch
+4. **Texture synthesis:** Create realistic textures that match surrounding elements
+5. **Style transfer:** Apply the look and feel of one image to another with descriptive prompts
+6. **Inpainting:** Fill gaps or missing areas in scanned or damaged artwork
+
+### Non-Destructive Workflow
+
+Modern Photoshop is built around non-destructive editing:
+
+- **Smart Objects:** Scale, transform, and filter without losing original data
+- **Adjustment Layers:** Apply color and tone changes that can be tweaked anytime
+- **Layer Masks:** Hide or reveal portions of a layer without erasing pixels
+- **Smart Filters:** Apply filters that remain editable and re-orderable
+- **Layer Comps:** Save multiple versions of a composition within one file
+
+## My Photoshop Workflow
+
+### Phase 1: Image Preparation
+
+Every project starts with raw material. Here's how I prepare images:
+
+1. **Import** RAW files from camera or download stock assets
+2. **Camera Raw Filter** for initial exposure, white balance, and lens corrections
+3. **Crop & straighten** to match the target aspect ratio
+4. **Clean up** dust spots, sensor marks, or distracting elements using Spot Healing
+5. **Color profile check** — ensure the file is in the correct working space
+
+### Phase 2: Core Editing
+
+This is where the heavy lifting happens:
+
+#### Compositing
+
+When building hero images for landing pages, I often combine multiple source images:
+
+- **Pen Tool** for precise selections around hard-edge subjects
+- **Select Subject** AI for quick initial masks on people or products
+- **Refine Edge** for fine hair, fur, or translucent materials
+- **Blend modes** (Multiply, Screen, Overlay) for natural light integration
+- **Color matching** using Curves and Selective Color adjustment layers
+- **Shadow creation** on separate layers using Multiply blend mode + soft brush
+
+#### Retouching
+
+For portrait or product photography:
+
+- **Frequency Separation** technique for skin retouching (texture vs. tone)
+- **Dodge & Burn** on a 50% gray layer in Soft Light blend mode
+- **Healing Brush** and **Clone Stamp** for removing blemishes and distractions
+- **Liquify** for subtle adjustments to product shapes (used sparingly)
+- **Perspective Warp** for correcting lens distortion on product shots
+
+#### Color Grading
+
+Setting the mood through color:
+
+- **Color Lookup** adjustment layers with LUT presets for cinematic looks
+- **Gradient Maps** for stylized duotone or tritone effects
+- **Curves** with targeted channel adjustments for precise color balance
+- **HSL/Color** panel for isolating and adjusting specific color ranges
+- **Photo Filter** for subtle warm/cool shifts that unify a composition
+
+### Phase 3: Export & Optimization
+
+Preparing assets for the web:
+
+```
+Export Settings for Web:
+├── Hero images: JPEG, quality 80-85, progressive, sRGB
+├── Product photos: PNG-24 with transparency when needed
+├── Icons & graphics: SVG (via Illustrator) or 2x/3x PNG exports
+├── Social media: JPEG, quality 90, platform-specific dimensions
+├── Textures: WebP where supported, JPEG fallback
+└── Favicons: Multi-size export (16, 32, 48, 180px)
+```
+
+## Essential Shortcuts I Use Daily
+
+| Action             | Shortcut              |
+| ------------------ | --------------------- |
+| Transform          | `⌘ + T`               |
+| New Layer          | `⌘ + Shift + N`       |
+| Merge Visible      | `⌘ + Shift + Alt + E` |
+| Deselect           | `⌘ + D`               |
+| Invert Selection   | `⌘ + Shift + I`       |
+| Zoom to 100%       | `⌘ + 1`               |
+| Fit to Screen      | `⌘ + 0`               |
+| Brush Tool         | `B`                   |
+| Move Tool          | `V`                   |
+| Pen Tool           | `P`                   |
+| Quick Selection    | `W`                   |
+| Dodge/Burn         | `O`                   |
+| Eyedropper         | `I`                   |
+| Content-Aware Fill | `Shift + F5`          |
+| Free Transform     | `⌘ + T`               |
+| Duplicate Layer    | `⌘ + J`               |
+
+## Plugins & Extensions
+
+My Photoshop setup is enhanced with several plugins:
+
+### Nik Collection by DxO
+
+A suite of seven plugins for creative effects:
+
+- **Silver Efex Pro:** Black and white conversions with film-inspired presets
+- **Color Efex Pro:** Color correction and creative color effects
+- **Viveza:** Selective adjustments using U Point technology
+- **HDR Efex Pro:** HDR merging and tone mapping
+- **Analog Efex Pro:** Vintage camera and film effects
+- **Sharpener Pro:** Output sharpening tailored to print or screen
+
+### Topaz Labs
+
+AI-powered enhancement tools:
+
+- **Topaz Photo AI:** Upscaling, sharpening, and noise reduction in one tool
+- **Topaz Mask AI:** Tricky selections like hair, trees, and transparent objects
+- **Topaz Gigapixel AI:** Intelligent image upscaling up to 600%
+- **Topaz DeNoise AI:** Noise removal while preserving fine detail
+
+### Other Extensions
+
+- **GuideGuide:** Generate column grids, golden ratio guides, and custom measurements
+- **Fontself:** Turn any lettering into a font directly from Photoshop
+- **PixelSquid:** Access 3D objects as Photoshop layers with full lighting control
+- **Renamy:** Auto-rename layers for clean file organization
+
+## File Organization
+
+I maintain a strict file organization system for every project:
+
+```
+project-name/
+├── _raw/                    # Original camera files or downloads
+│   ├── IMG_4521.CR3
+│   ├── IMG_4522.CR3
+│   └── stock-photo-ref.jpg
+├── _working/                # PSD files with all layers intact
+│   ├── hero-composite.psd
+│   ├── product-shots.psd
+│   ├── social-assets.psd
+│   └── textures.psd
+├── _exports/                # Final exports for delivery
+│   ├── web/
+│   │   ├── hero-1920.webp
+│   │   ├── hero-1920@2x.webp
+│   │   ├── hero-mobile.webp
+│   │   └── about-team.jpg
+│   ├── social/
+│   │   ├── og-image-1200x630.jpg
+│   │   ├── twitter-card-1200x600.jpg
+│   │   └── instagram-1080x1080.jpg
+│   └── print/
+│       ├── brochure-front.pdf
+│       └── business-card.pdf
+└── _references/             # Mood boards and reference images
+    ├── moodboard.png
+    └── color-palette-ref.jpg
+```
+
+## Photoshop vs Figma: When I Use Each
+
+Understanding which tool to reach for saves time:
+
+### Use Photoshop When
+
+- Editing photographs or complex images
+- Creating detailed composites from multiple sources
+- Working with textures, patterns, or organic shapes
+- Needing advanced color management (CMYK, Pantone, etc.)
+- Preparing images for print production
+- Using AI-powered generative features
+- Batch processing with Actions
+
+### Use Figma When
+
+- Designing user interfaces and web layouts
+- Creating design systems and component libraries
+- Collaborating with team members in real-time
+- Prototyping interactions and animations
+- Building responsive layouts with auto-layout
+- Handing off designs to developers
+
+### The Sweet Spot
+
+Many projects require both tools. My typical flow:
+
+1. **Photoshop:** Edit and prepare all imagery (retouch, composite, color grade)
+2. **Figma:** Import processed images into UI layouts and design compositions
+3. **Photoshop:** Final touch-ups on exported compositions or social media assets
+4. **Figma:** Generate developer handoff specs and design documentation
+5. **Photoshop:** Prepare any print-specific deliverables (CMYK conversion, bleed setup)
+
+## Performance Optimization
+
+Photoshop can be resource-intensive. Here's how I keep it running smoothly on the MacBook Pro:
+
+### Memory Settings
+
+```
+Preferences → Performance:
+├── RAM allocation: 75% (48GB of 64GB)
+├── History states: 50
+├── Cache levels: 6
+├── Cache tile size: 1024K
+├── GPU acceleration: Enabled (Metal)
+└── OpenCL: Enabled for select features
+```
+
+### Scratch Disk
+
+I use a dedicated partition on the internal SSD as the primary scratch disk, which avoids competing with the OS for disk I/O during heavy operations. The M3 Max's SSD throughput (7.4 GB/s) means scratch disk performance is rarely a bottleneck.
+
+### Layer Management
+
+Keeping file sizes manageable:
+
+- **Group related layers** and collapse when not in use
+- **Convert to Smart Objects** early to reduce layer count
+- **Flatten invisible layers** before final export
+- **Use layer comps** instead of duplicating entire compositions
+- **Purge cache** periodically: `Edit → Purge → All`
+- **Rasterize Smart Objects** when no further edits are expected
+
+## Advanced Techniques
+
+### Frequency Separation
+
+This technique separates texture from color/tone, allowing independent retouching:
+
+1. Duplicate the base layer twice
+2. On the lower copy: Apply Gaussian Blur (radius ~8-10px)
+3. On the upper copy: Apply Image → Subtract (Scale: 2, Offset: 128)
+4. Set upper layer to Linear Light blend mode
+5. Now you can retouch skin texture on the top layer and tone/color on the bottom
+6. Use a soft brush on the tone layer to even out skin without affecting pores
+
+### Luminosity Masking
+
+Creating selections based on brightness values:
+
+1. Go to Channels panel
+2. `⌘ + Click` on the RGB channel thumbnail to select highlights
+3. Save as a new channel
+4. Intersect with itself for progressively narrower selections
+5. Use these masks for targeted adjustments without affecting other tones
+6. Particularly powerful for landscape photography and architectural shots
+
+### Smart Object Workflow
+
+Why Smart Objects are essential:
+
+- **Non-destructive transforms:** Scale down and back up without quality loss
+- **Linked Smart Objects:** Update once, propagate everywhere in the file
+- **Smart Filters:** Apply filters that remain editable at any time
+- **Embedded vs Linked:** Use linked for assets shared across multiple files
+- **Replace Contents:** Swap the source image while keeping all transforms and filters
+
+## Keyboard Shortcuts for Brush Settings
+
+For digital painting and retouching, quick brush adjustments are crucial:
+
+- **Brush size:** `[` (decrease) and `]` (increase)
+- **Brush hardness:** `Shift + [` (softer) and `Shift + ]` (harder)
+- **Brush opacity:** Number keys (1 = 10%, 5 = 50%, 0 = 100%)
+- **Brush flow:** `Alt + Number keys`
+- **Foreground/Background swap:** `X`
+- **Default colors:** `D`
+- **Airbrush mode:** `Shift + Alt + P`
+- **Toggle last used brush:** `Alt + Right Click`
+
+## Color Management
+
+For professional output, color accuracy matters:
+
+### Working Spaces
+
+- **sRGB:** Web and screen delivery — the safe default for digital work
+- **Adobe RGB:** Photography and print workflows with wider gamut
+- **Display P3:** Apple ecosystem design (matches Studio Display gamut)
+- **ProPhoto RGB:** Maximum color range for archival editing
+
+### Soft Proofing
+
+Before exporting for web, I soft-proof in sRGB:
+
+1. `View → Proof Setup → Internet (sRGB)`
+2. `View → Proof Colors` to toggle the preview
+3. Check for out-of-gamut colors with `View → Gamut Warning`
+4. Adjust with Selective Color or Curves until the sRGB preview matches intent
+5. Toggle proof view frequently to ensure the edit works in both spaces
+
+### Export Profile
+
+Always convert to sRGB for web delivery:
+
+```
+Edit → Convert to Profile:
+├── Destination: sRGB IEC61966-2.1
+├── Intent: Relative Colorimetric
+├── Black Point Compensation: On
+└── Use Dither: On (essential for gradients to avoid banding)
+```
+
+## Generative Fill Use Cases
+
+The AI-powered Generative Fill has become part of my daily workflow:
+
+### Background Extension
+
+When a hero image needs to be wider than the original:
+
+1. Expand the canvas to the target width using the Crop Tool
+2. Select the empty area with the Rectangular Marquee
+3. Run Generative Fill with a descriptive prompt matching the scene
+4. Choose the best variation from the three generated options
+5. Fine-tune with Clone Stamp at any visible seams
+6. Apply a slight Gaussian Blur (0.5px) to unify the blend
+
+### Object Removal
+
+Removing distracting elements from photos:
+
+1. Lasso the unwanted object loosely (a tight selection is not needed)
+2. Run Generative Fill (leave prompt empty for automatic context-aware fill)
+3. The AI analyzes surrounding context and generates a natural replacement
+4. Compare with Content-Aware Fill — Generative Fill handles complex scenes better
+5. Use a layer mask to blend if the result needs partial adjustment
+
+### Concept Generation
+
+Exploring design directions quickly:
+
+1. Make a rough selection where a new element should go
+2. Type a descriptive prompt (e.g., "minimalist desk lamp with warm light")
+3. Review three AI-generated variations
+4. Use as reference or starting point for the final design
+5. Iterate with refined prompts to narrow down the direction
+
+## Automation with Actions
+
+For repetitive tasks, I record Photoshop Actions to save hours of manual work:
+
+### Export Action
+
+```
+Action: "Export for Web @2x"
+├── Image Size: 200% (bicubic smoother)
+├── Sharpen: Smart Sharpen, Amount 80%, Radius 1px, Reduce Noise 10%
+├── Convert to Profile: sRGB IEC61966-2.1
+├── Save for Web: JPEG, Quality 82, Progressive, Optimized
+├── Add to filename: @2x suffix
+└── Close (without saving changes to original)
+```
+
+### Batch Processing
+
+Using `File → Automate → Batch` to process entire folders:
+
+1. Select the recorded Action from the dropdown
+2. Choose source folder (or drag files into the batch dialog)
+3. Set destination and naming convention
+4. Enable error logging to catch any issues
+5. Run and review the output folder
+
+This saves hours when processing product photography sets or social media image batches. A set of 200 product images can be resized, sharpened, and exported in under 10 minutes.
+
+## Tips for Developers Using Photoshop
+
+If you're a developer who occasionally needs Photoshop:
+
+1. **Use the Properties panel:** Quick access to layer styles, adjustments, and transforms
+2. **Learn Quick Selection + Refine Edge:** Faster than manual Pen Tool for most selections
+3. **Export assets at 2x:** Design at 1x, export at 2x for Retina displays
+4. **Use Generator:** Enable `File → Generate → Image Assets` to auto-export layers as you edit
+5. **Measure in CSS:** Hold `Alt` while hovering to see pixel distances between elements
+6. **Copy CSS:** Right-click any layer → `Copy CSS` for quick CSS property extraction
+7. **Artboards:** Use artboards to lay out multiple screen sizes in one document
+8. **Slice Tool:** Define export regions for complex multi-asset layouts
+9. **Image → Variables:** Data-driven graphics for personalized banners or social cards
+
+## Camera Raw as a Smart Filter
+
+One of the most powerful non-destructive workflows:
+
+1. Convert the layer to a Smart Object
+2. Apply `Filter → Camera Raw Filter`
+3. Adjust exposure, clarity, dehaze, color grading
+4. The filter remains as an editable Smart Filter
+5. Double-click the filter name anytime to re-open Camera Raw
+6. Stack multiple Camera Raw filters for complex looks
+7. Use the Smart Filter mask to apply adjustments selectively
+
+This approach means you never bake in destructive edits and can always return to the original image data.
+
+## Conclusion
+
+Photoshop isn't the newest tool in my arsenal, but it remains the most versatile for image work. Its combination of decades of refinement, AI-powered features, and deep integration with the Adobe ecosystem makes it an essential part of any creative workflow. Whether I'm preparing hero images for a landing page, retouching product photography, or exploring visual concepts, Photoshop delivers with precision and flexibility that no other tool has matched — yet.
+
+The key is knowing when to use it and when to reach for a more specialized tool. For pure image work, nothing comes close. For UI design, Figma wins. For code, Cursor. Understanding each tool's strengths and building workflows that combine them effectively is what makes a creative practice efficient and enjoyable.
+
+As AI features continue to evolve — with Generative Fill, Neural Filters, and Firefly integration improving with each update — Photoshop is becoming less of a pixel-editing tool and more of a creative co-pilot. The best workflows will always combine human judgment with AI acceleration, and Photoshop is leading that transition better than most.
