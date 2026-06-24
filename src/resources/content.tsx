@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work, Uses, Now
 import { Line, Row, Text } from '@once-ui-system/core';
 
 const person: Person = {
-  firstName: 'Selene',
-  lastName: 'Yu',
-  name: `Selene Yu`,
-  role: 'Design Engineer',
+  firstName: 'Yuu',
+  lastName: '',
+  name: `Yuu`,
+  role: 'Full-stack Developer',
   avatar: '/images/avatar.jpg',
-  email: 'example@gmail.com',
-  location: 'Asia/Jakarta', // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ['English', 'Bahasa'], // optional: Leave the array empty if you don't want to display languages
+  email: 'wy981120@gmail.com',
+  location: 'Asia/Shanghai', // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ['Chinese', 'English'], // optional: Leave the array empty if you don't want to display languages
   locale: 'en' // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
 };
 
@@ -26,25 +26,7 @@ const social: Social = [
   {
     name: 'GitHub',
     icon: 'github',
-    link: 'https://github.com/once-ui-system',
-    essential: true
-  },
-  {
-    name: 'LinkedIn',
-    icon: 'linkedin',
-    link: 'https://www.linkedin.com/company/once-ui/',
-    essential: true
-  },
-  {
-    name: 'Instagram',
-    icon: 'instagram',
-    link: 'https://www.instagram.com/once_ui/',
-    essential: false
-  },
-  {
-    name: 'Threads',
-    icon: 'threads',
-    link: 'https://www.threads.com/@once_ui',
+    link: 'https://github.com/Yuu-1120',
     essential: true
   },
   {
@@ -61,7 +43,7 @@ const home: Home = {
   label: 'Home',
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Crafting seamless digital experiences from pixel to production</>,
   featured: {
     display: true,
     title: (
@@ -76,11 +58,11 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm {person.firstName}, a {person.role.toLowerCase()} at{' '}
+      I'm {person.firstName}, a {person.role.toLowerCase()} passionate about building{' '}
       <Text as='span' size='xl' weight='strong'>
-        ONCE UI
-      </Text>
-      , where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+        scalable
+      </Text>{' '}
+      web applications. I love turning ideas into reality <br /> through clean code and thoughtful design.
     </>
   )
 };
@@ -252,8 +234,8 @@ const gallery: Gallery = {
   label: 'Gallery',
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
+  // Images by Yuu
+  // Replace with your own
   images: [
     {
       src: '/images/gallery/horizontal-1.jpg',
