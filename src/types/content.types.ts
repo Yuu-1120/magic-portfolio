@@ -312,3 +312,30 @@ export interface Now extends BasePageConfig {
   /** List of current activities/interests */
   entries: NowEntry[];
 }
+
+/**
+ * A single item in the Play page (mini-games, tools, experiments).
+ */
+export interface PlayItem {
+  /** Display name */
+  name: string;
+  /** Short description */
+  description: string;
+  /** Icon name from icons.ts */
+  icon?: string;
+  /** Link to the game/tool (external URL or internal path) */
+  link?: string;
+  /** Tags for categorization (e.g. "Game", "Tool", "WIP") */
+  tags?: string[];
+  /** Status indicator */
+  status?: 'live' | 'wip' | 'planned';
+}
+
+/**
+ * Play page configuration.
+ * @description Configuration for the /play page — mini-games, tools, and experiments.
+ */
+export interface Play extends BasePageConfig {
+  /** List of play items */
+  items: PlayItem[];
+}

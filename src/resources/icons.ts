@@ -32,7 +32,8 @@ import {
   PiBrowserDuotone,
   PiPlugDuotone,
   PiClockDuotone,
-  PiSparkleDuotone
+  PiSparkleDuotone,
+  PiGameControllerDuotone
 } from 'react-icons/pi';
 
 import { SiJavascript, SiNextdotjs, SiFigma, SiSupabase } from 'react-icons/si';
@@ -97,7 +98,8 @@ export const iconLibrary: Record<string, IconType> = {
   browser: PiBrowserDuotone,
   plugin: PiPlugDuotone,
   clock: PiClockDuotone,
-  sparkle: PiSparkleDuotone
+  sparkle: PiSparkleDuotone,
+  gamepad: PiGameControllerDuotone
 };
 
 export type IconLibrary = typeof iconLibrary;

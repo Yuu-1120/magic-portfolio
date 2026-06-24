@@ -23,7 +23,8 @@ const routes: RoutesConfig = {
   '/blog': true,
   '/gallery': true,
   '/uses': true,
-  '/now': true
+  '/now': true,
+  '/play': true
 };
 
 const display: DisplayConfig = {

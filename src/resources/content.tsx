@@ -1,4 +1,4 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work, Uses, Now } from '@/types';
+import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work, Uses, Now, Play } from '@/types';
 import { Line, Row, Text } from '@once-ui-system/core';
 
 const person: Person = {
@@ -446,4 +446,20 @@ const now: Now = {
   ]
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery, uses, now };
+const play: Play = {
+  path: '/play',
+  label: 'Play',
+  title: `Play – ${person.name}`,
+  description: `Mini-games, tools, and experiments by ${person.name}`,
+  items: [
+    {
+      name: 'Coming Soon',
+      description: 'Your first mini-game or tool will appear here. Start building something fun!',
+      icon: 'gamepad',
+      tags: ['WIP'],
+      status: 'planned'
+    }
+  ]
+};
+
+export { person, social, newsletter, home, about, blog, work, gallery, uses, now, play };

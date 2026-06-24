@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, useCallback } from 'react';
 import { Fade, Flex, Line, Row, ToggleButton } from '@once-ui-system/core';
 import gsap from 'gsap';
 
-import { routes, display, person, about, blog, work, gallery, uses, now } from '@/resources';
+import { routes, display, person, about, blog, work, gallery, uses, now, play } from '@/resources';
 import { ThemeToggle } from './ThemeToggle';
 import styles from './Header.module.scss';
 
@@ -184,6 +184,16 @@ export const Header = () => {
                   </Row>
                   <Row hide s={{ hide: false }}>
                     <ToggleButton prefixIcon='clock' href='/now' />
+                  </Row>
+                </div>
+              )}
+              {routes['/play'] && (
+                <div ref={setButtonRef('/play')}>
+                  <Row s={{ hide: true }}>
+                    <ToggleButton prefixIcon='gamepad' href='/play' label={play.label} />
+                  </Row>
+                  <Row hide s={{ hide: false }}>
+                    <ToggleButton prefixIcon='gamepad' href='/play' />
                   </Row>
                 </div>
               )}
