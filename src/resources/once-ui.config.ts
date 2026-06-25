@@ -24,7 +24,8 @@ const routes: RoutesConfig = {
   '/gallery': true,
   '/uses': true,
   '/now': true,
-  '/play': true
+  '/play': true,
+  '/play/flappy-bird': true
 };
 
 const display: DisplayConfig = {

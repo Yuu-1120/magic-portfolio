@@ -457,11 +457,12 @@ const play: Play = {
       icon: 'gamepad',
       items: [
         {
-          name: 'Coming Soon',
-          description: 'Your first mini-game will appear here.',
+          name: 'Flappy Bird',
+          description: 'A classic Flappy Bird clone built with React and Canvas. Tap to fly, avoid the pipes!',
           icon: 'gamepad',
-          tags: ['Game'],
-          status: 'planned',
+          link: '/play/flappy-bird',
+          tags: ['Game', 'Canvas'],
+          status: 'live',
           size: 'large'
         }
       ]
