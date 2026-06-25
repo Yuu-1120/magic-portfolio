@@ -96,6 +96,7 @@ export default async function RootLayout({
           as='body'
           background='page'
           fillWidth
+          suppressHydrationWarning
           style={{ minHeight: '100vh' }}
           margin='0'
           padding='0'

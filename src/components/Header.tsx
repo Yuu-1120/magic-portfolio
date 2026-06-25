@@ -38,7 +38,7 @@ const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = 'en-GB' })
     return () => clearInterval(intervalId);
   }, [timeZone, locale]);
 
-  return <>{currentTime}</>;
+  return <span style={{ fontVariantNumeric: 'tabular-nums' }}>{currentTime}</span>;
 };
 
 export default TimeDisplay;
@@ -69,6 +69,7 @@ export const Header = () => {
     if (pathname.startsWith('/gallery')) return '/gallery';
     if (pathname.startsWith('/uses')) return '/uses';
     if (pathname.startsWith('/now')) return '/now';
+    if (pathname.startsWith('/play')) return '/play';
     return '/';
   }, [pathname]);
 
@@ -79,19 +80,24 @@ export const Header = () => {
     const nav = navRef.current;
 
     if (activeEl && indicator && nav) {
-      const navRect = nav.getBoundingClientRect();
-      const btnRect = activeEl.getBoundingClientRect();
-      const x = btnRect.left - navRect.left;
-      const y = btnRect.top - navRect.top;
+      requestAnimationFrame(() => {
+        const navRect = nav.getBoundingClientRect();
+        const btnRect = activeEl.getBoundingClientRect();
+        const x = btnRect.left - navRect.left;
+        const y = btnRect.top - navRect.top;
 
-      gsap.to(indicator, {
-        x,
-        y,
-        width: btnRect.width,
-        height: btnRect.height,
-        duration: 0.45,
-        ease: 'power3.out',
-        opacity: 1
+        // Use transform only — no layout-triggering width/height
+        indicator.style.width = `${btnRect.width}px`;
+        indicator.style.height = `${btnRect.height}px`;
+
+        gsap.to(indicator, {
+          x,
+          y,
+          duration: 0.45,
+          ease: 'power3.out',
+          opacity: 1,
+          overwrite: true
+        });
       });
     }
   }, [pathname, getActiveKey]);
@@ -114,13 +120,13 @@ export const Header = () => {
           position: 'fixed'
         }}
       >
-        <Row paddingLeft='12' fillWidth vertical='center' textVariant='body-default-s'>
+        <Row paddingLeft='12' vertical='center' textVariant='body-default-s'>
           {display.location && <Row s={{ hide: true }}>{person.location}</Row>}
         </Row>
         <Row fillWidth horizontal='center'>
-          <Row className={styles.glassNav} radius='m-4' padding='4' horizontal='center' zIndex={1} ref={navRef}>
+          <Row className={styles.glassNav} radius='m-4' padding='8' horizontal='center' zIndex={1} ref={navRef}>
             <div ref={indicatorRef} className={styles.indicator} />
-            <Row gap='4' vertical='center' textVariant='body-default-s' suppressHydrationWarning>
+            <Row gap='2' vertical='center' textVariant='body-default-s' suppressHydrationWarning>
               {routes['/'] && (
                 <div ref={setButtonRef('/')}>
                   <ToggleButton prefixIcon='home' href='/' />
@@ -206,7 +212,7 @@ export const Header = () => {
             </Row>
           </Row>
         </Row>
-        <Flex fillWidth horizontal='end' vertical='center'>
+        <Flex horizontal='end' vertical='center'>
           <Flex paddingRight='12' horizontal='end' vertical='center' textVariant='body-default-s' gap='20'>
             <Flex s={{ hide: true }}>{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
           </Flex>

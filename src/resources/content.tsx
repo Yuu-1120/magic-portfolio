@@ -451,13 +451,48 @@ const play: Play = {
   label: 'Play',
   title: `Play – ${person.name}`,
   description: `Mini-games, tools, and experiments by ${person.name}`,
-  items: [
+  categories: [
     {
-      name: 'Coming Soon',
-      description: 'Your first mini-game or tool will appear here. Start building something fun!',
+      title: 'Games',
       icon: 'gamepad',
-      tags: ['WIP'],
-      status: 'planned'
+      items: [
+        {
+          name: 'Coming Soon',
+          description: 'Your first mini-game will appear here.',
+          icon: 'gamepad',
+          tags: ['Game'],
+          status: 'planned',
+          size: 'large'
+        }
+      ]
+    },
+    {
+      title: 'Tools',
+      icon: 'uses',
+      items: [
+        {
+          name: 'Coming Soon',
+          description: 'A useful tool is on the way.',
+          icon: 'code',
+          tags: ['Tool'],
+          status: 'planned',
+          size: 'medium'
+        }
+      ]
+    },
+    {
+      title: 'Experiments',
+      icon: 'sparkle',
+      items: [
+        {
+          name: 'Coming Soon',
+          description: 'Creative coding experiments will show up here.',
+          icon: 'sparkle',
+          tags: ['Experiment'],
+          status: 'planned',
+          size: 'small'
+        }
+      ]
     }
   ]
 };

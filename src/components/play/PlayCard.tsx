@@ -6,6 +6,7 @@ import styles from './PlayCard.module.scss';
 
 interface PlayCardProps {
   item: PlayItem;
+  accent?: string;
 }
 
 const statusLabel: Record<string, string> = {
@@ -14,22 +15,29 @@ const statusLabel: Record<string, string> = {
   planned: 'Planned'
 };
 
-export const PlayCard: React.FC<PlayCardProps> = ({ item }) => {
+export const PlayCard: React.FC<PlayCardProps> = ({ item, accent }) => {
+  const sizeClass = item.size || 'medium';
+  const accentClass = accent ? `accent${accent}` : '';
+
   const cardContent = (
-    <Column fillWidth gap='12'>
-      {/* Icon + Name */}
+    <Column fillWidth gap='12' className={styles[sizeClass]}>
+      {/* Icon */}
+      {item.icon && (
+        <div className={`${styles.iconArea} ${accent ? styles[accentClass] : ''}`}>
+          <Icon name={item.icon as any} size='l' />
+        </div>
+      )}
+
+      {/* Name + Status */}
       <Flex horizontal='between' vertical='center'>
-        <Flex gap='12' vertical='center'>
-          {item.icon && <Icon name={item.icon as any} size='l' />}
-          <Text variant='heading-strong-m'>{item.name}</Text>
-        </Flex>
+        <Text variant='heading-strong-l'>{item.name}</Text>
         {item.status && (
           <div className={`${styles.statusDot} ${styles[item.status]}`} title={statusLabel[item.status]} />
         )}
       </Flex>
 
       {/* Description */}
-      <Text variant='body-default-s' onBackground='neutral-weak'>
+      <Text variant='body-default-s' onBackground='neutral-weak' style={{ flex: 1 }}>
         {item.description}
       </Text>
 
@@ -46,11 +54,15 @@ export const PlayCard: React.FC<PlayCardProps> = ({ item }) => {
 
   if (item.link) {
     return (
-      <SmartLink href={item.link} style={{ textDecoration: 'none' }}>
-        <div className={styles.playCard}>{cardContent}</div>
+      <SmartLink href={item.link} style={{ textDecoration: 'none', display: 'block' }}>
+        <div className={`${styles.playCard} ${styles[sizeClass]} ${accent ? styles[accentClass] : ''}`}>
+          {cardContent}
+        </div>
       </SmartLink>
     );
   }
 
-  return <div className={styles.playCard}>{cardContent}</div>;
+  return (
+    <div className={`${styles.playCard} ${styles[sizeClass]} ${accent ? styles[accentClass] : ''}`}>{cardContent}</div>
+  );
 };

@@ -329,6 +329,20 @@ export interface PlayItem {
   tags?: string[];
   /** Status indicator */
   status?: 'live' | 'wip' | 'planned';
+  /** Card size for bento layout */
+  size?: 'small' | 'medium' | 'large';
+}
+
+/**
+ * A category group in the Play page.
+ */
+export interface PlayCategory {
+  /** Category title (e.g. "Games", "Tools") */
+  title: string;
+  /** Icon for the category */
+  icon?: string;
+  /** Items in this category */
+  items: PlayItem[];
 }
 
 /**
@@ -336,6 +350,6 @@ export interface PlayItem {
  * @description Configuration for the /play page — mini-games, tools, and experiments.
  */
 export interface Play extends BasePageConfig {
-  /** List of play items */
-  items: PlayItem[];
+  /** Categorized list of play items */
+  categories: PlayCategory[];
 }
