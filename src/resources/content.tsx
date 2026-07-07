@@ -472,11 +472,12 @@ const play: Play = {
       icon: 'uses',
       items: [
         {
-          name: 'Coming Soon',
-          description: 'A useful tool is on the way.',
-          icon: 'code',
-          tags: ['Tool'],
-          status: 'planned',
+          name: 'Orbis.Nft',
+          description: 'A dark space-themed NFT landing page with liquid glass UI and video backgrounds.',
+          icon: 'browser',
+          link: '/play/orbis-nft',
+          tags: ['Web', 'NFT'],
+          status: 'live',
           size: 'medium'
         }
       ]

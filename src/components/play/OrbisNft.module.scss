@@ -1,0 +1,515 @@
+.liquidGlass {
+  background: rgba(255, 255, 255, 0.01);
+  background-blend-mode: luminosity;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: none;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.liquidGlass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.4px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.45) 0%,
+    rgba(255, 255, 255, 0.15) 20%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.15) 80%,
+    rgba(255, 255, 255, 0.45) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.textureOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  background-image: url('/texture.png');
+  background-size: cover;
+  mix-blend-mode: lighten;
+  opacity: 0.6;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.videoBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1831px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.heroSection {
+  min-height: 100vh;
+  border-radius: 0 0 32px 32px;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.logo {
+  font-family: 'Anton', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #eff4ff;
+}
+
+.nav {
+  border-radius: 28px;
+  padding: 24px 52px;
+}
+
+.navList {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  font-family: 'Anton', sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #eff4ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #6fff00;
+}
+
+.heroContent {
+  position: relative;
+  padding: 120px 0;
+}
+
+.heroHeading {
+  font-family: 'Anton', sans-serif;
+  font-size: 40px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #eff4ff;
+  max-width: 780px;
+  margin: 0;
+}
+
+.cursiveAccent {
+  font-family: 'Condiment', cursive;
+  color: #6fff00;
+  mix-blend-mode: exclusion;
+  opacity: 0.9;
+}
+
+.socialIconsDesktop {
+  position: absolute;
+  top: 120px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.socialIconsMobile {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.socialBtn {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eff4ff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.socialBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.aboutSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutTop {
+  display: flex;
+  gap: 64px;
+  margin-bottom: 96px;
+}
+
+.aboutHeading {
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #eff4ff;
+  position: relative;
+  margin: 0;
+}
+
+.aboutText {
+  font-family: monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #eff4ff;
+  max-width: 266px;
+  line-height: 1.6;
+}
+
+.aboutBottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.aboutDecorative {
+  font-family: monospace;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #eff4ff;
+  opacity: 0.1;
+  max-width: 266px;
+  line-height: 1.6;
+}
+
+.collectionSection {
+  background: #010828;
+  padding: 96px 0;
+}
+
+.collectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 64px;
+}
+
+.collectionHeading {
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #eff4ff;
+  margin: 0;
+}
+
+.collectionBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+}
+
+.collectionBtnText {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.collectionBtnLarge {
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  color: #eff4ff;
+  text-transform: uppercase;
+}
+
+.collectionBtnSmall {
+  font-family: 'Anton', sans-serif;
+  font-size: 20px;
+  color: #eff4ff;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.collectionBtnBar {
+  height: 6px;
+  background: #6fff00;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.card {
+  border-radius: 32px;
+  padding: 18px;
+  transition: background 0.3s;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.cardVideoWrapper {
+  position: relative;
+  padding-bottom: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.cardVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardOverlay {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  right: 18px;
+  border-radius: 20px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardScore {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cardScoreLabel {
+  font-size: 11px;
+  color: rgba(239, 244, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.cardScoreValue {
+  font-size: 16px;
+  color: #eff4ff;
+  font-weight: 600;
+}
+
+.cardArrowBtn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b724ff 0%, #7c3aed 100%);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.5);
+  transition: transform 0.3s;
+}
+
+.cardArrowBtn:hover {
+  transform: scale(1.1);
+}
+
+.ctaSection {
+  position: relative;
+  width: 100%;
+}
+
+.ctaVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ctaContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 8%;
+}
+
+.ctaTextBlock {
+  position: relative;
+  text-align: right;
+}
+
+.ctaHeading {
+  font-family: 'Anton', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #eff4ff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.ctaSocial {
+  position: absolute;
+  left: 8%;
+  bottom: 12%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ctaSocialBtn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eff4ff;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.ctaSocialBtn:last-child {
+  border-bottom: none;
+}
+
+.ctaSocialBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 640px) {
+  .heroHeading {
+    font-size: 60px;
+  }
+  .aboutHeading {
+    font-size: 44px;
+  }
+  .aboutText {
+    font-size: 15px;
+  }
+  .collectionHeading {
+    font-size: 44px;
+  }
+  .collectionBtnLarge {
+    font-size: 44px;
+  }
+  .collectionBtnSmall {
+    font-size: 28px;
+  }
+  .collectionBtnBar {
+    height: 8px;
+  }
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ctaHeading {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroHeading {
+    font-size: 75px;
+    line-height: 1;
+  }
+  .aboutHeading {
+    font-size: 52px;
+  }
+  .aboutText {
+    font-size: 16px;
+  }
+  .collectionHeading {
+    font-size: 52px;
+  }
+  .collectionBtnLarge {
+    font-size: 52px;
+  }
+  .collectionBtnSmall {
+    font-size: 32px;
+  }
+  .ctaHeading {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroHeading {
+    font-size: 90px;
+    margin-left: 128px;
+  }
+  .aboutHeading {
+    font-size: 60px;
+  }
+  .collectionHeading {
+    font-size: 60px;
+  }
+  .collectionBtnLarge {
+    font-size: 60px;
+  }
+  .collectionBtnSmall {
+    font-size: 36px;
+  }
+  .collectionBtnBar {
+    height: 10px;
+  }
+  .cardGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ctaHeading {
+    font-size: 60px;
+  }
+  .ctaContent {
+    padding-right: 20%;
+    padding-left: 15%;
+  }
+  .ctaSocial {
+    left: 8%;
+    bottom: 20%;
+    border-radius: 20px;
+  }
+  .ctaSocialBtn {
+    width: 268px;
+    height: 80px;
+  }
+}
