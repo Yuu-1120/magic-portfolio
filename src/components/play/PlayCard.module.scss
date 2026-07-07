@@ -81,17 +81,17 @@
     }
   }
 
-  &.accentTools {
+  &.accentWebsites {
     background:
-      radial-gradient(ellipse at 0% 100%, rgba(16, 185, 129, 0.04) 0%, transparent 60%),
-      radial-gradient(ellipse at 100% 0%, rgba(52, 211, 153, 0.03) 0%, transparent 50%), var(--page-background);
+      radial-gradient(ellipse at 0% 100%, rgba(56, 189, 248, 0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 100% 0%, rgba(59, 130, 246, 0.03) 0%, transparent 50%), var(--page-background);
 
     .iconArea {
-      background: rgba(16, 185, 129, 0.1);
+      background: rgba(56, 189, 248, 0.1);
     }
   }
 
-  &.accentExperiments {
+  &.accentLabs {
     background:
       radial-gradient(ellipse at 0% 100%, rgba(245, 158, 11, 0.04) 0%, transparent 60%),
       radial-gradient(ellipse at 100% 0%, rgba(251, 191, 36, 0.03) 0%, transparent 50%), var(--page-background);

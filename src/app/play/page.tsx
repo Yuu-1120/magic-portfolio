@@ -15,8 +15,8 @@ export async function generateMetadata() {
 // Map category titles to accent class names
 const accentMap: Record<string, string> = {
   Games: 'Games',
-  Tools: 'Tools',
-  Experiments: 'Experiments'
+  Websites: 'Websites',
+  Labs: 'Labs'
 };
 
 export default function Play() {

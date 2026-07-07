@@ -468,8 +468,8 @@ const play: Play = {
       ]
     },
     {
-      title: 'Tools',
-      icon: 'uses',
+      title: 'Websites',
+      icon: 'browser',
       items: [
         {
           name: 'Orbis.Nft',
@@ -489,20 +489,31 @@ const play: Play = {
           tags: ['Web', 'Hero'],
           status: 'live',
           size: 'medium'
+        },
+        {
+          name: 'Stellar Agency',
+          description:
+            'Premium digital agency site with scroll-driven animations, glassmorphism, and expanding gallery.',
+          icon: 'browser',
+          link: '/play/agency',
+          tags: ['Web', 'Agency'],
+          status: 'live',
+          size: 'medium'
         }
       ]
     },
     {
-      title: 'Experiments',
+      title: 'Labs',
       icon: 'sparkle',
       items: [
         {
-          name: 'Coming Soon',
-          description: 'Creative coding experiments will show up here.',
+          name: 'Effects Lab',
+          description: '12 种高级交互效果示例库：滚动揭示、视差、横向滚动、文字瀑布、磁性吸附、光标跟随等。',
           icon: 'sparkle',
-          tags: ['Experiment'],
-          status: 'planned',
-          size: 'small'
+          link: '/play/experiments',
+          tags: ['Effects', 'Framer Motion'],
+          status: 'live',
+          size: 'large'
         }
       ]
     }
