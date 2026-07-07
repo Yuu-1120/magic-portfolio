@@ -26,7 +26,7 @@ export default async function RootLayout({
 }>) {
   const headerList = await headers();
   const pathname = headerList.get('x-pathname') || headerList.get('x-invoke-pathname') || '';
-  const isStandalone = pathname.startsWith('/play/orbis-nft');
+  const isStandalone = pathname.startsWith('/play/orbis-nft') || pathname.startsWith('/play/aethera');
 
   return (
     <Flex

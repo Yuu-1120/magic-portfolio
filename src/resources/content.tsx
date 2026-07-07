@@ -479,6 +479,16 @@ const play: Play = {
           tags: ['Web', 'NFT'],
           status: 'live',
           size: 'medium'
+        },
+        {
+          name: 'Aethera',
+          description:
+            'Cinematic hero section with looping video background, fade transitions, and elegant typography.',
+          icon: 'browser',
+          link: '/play/aethera',
+          tags: ['Web', 'Hero'],
+          status: 'live',
+          size: 'medium'
         }
       ]
     },
